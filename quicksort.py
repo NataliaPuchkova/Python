@@ -1,5 +1,4 @@
-def 
-quicksort(sequence):
+def quicksort(sequence):
     """Classic implementation of quicksort using list 
     comprehensions and assuming the traditional relational
     operators work.  The primary weakness of this particular
