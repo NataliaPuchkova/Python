@@ -30,7 +30,7 @@ def  parseAndListMatches():
     directory = argv[1]
     if (not exists(directory)):
         print "Specified path \"%s\" does not exist." % directory
- return;
+        return;
     if (not isdir(directory)):
         print "\"%s\" exists, but doesn't name an actual directory." % directory
     filename = argv[2]
