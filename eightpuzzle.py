@@ -16,7 +16,7 @@ class Puzzle:
         self.initial = State(arr, None)
         self.isFinished = False
         self.arr = arr
-
+# invoke solve method if need to use BFS
     def solve (self):
         print(str(datetime.now()))
         queue = Q.PriorityQueue() #[]
@@ -55,17 +55,17 @@ class Puzzle:
                 index_of_0 = self.arr.index(0)
                 arr = n.moveUp(index_of_0)
                 if (arr!=None):
-                                   solveDFS(visited, arr)
+                    self.solveDFS(visited, arr)
                 arr1 = n.moveRight(index_of_0)
                 if (arr1!=None):
-                    solveDFS(visited, arr1)
+                    self.solveDFS(visited, arr1)
                 arr2 = n.moveDown(index_of_0)
                 if (arr2!=None):
-                    solveDFS(visited, arr2)
+                    self.solveDFS(visited, arr2)
                 arr3 = n.moveRight(index_of_0)
                 if (arr3!=None):
-                     solveDFS(visited, arr3)
-
+                    self.solveDFS(visited, arr3)
+#invoke solve1 method if you want to use DFS approach
     def solve1 (self):
         print(str(datetime.now()))
         self.solveDFS ( [], self.arr)
